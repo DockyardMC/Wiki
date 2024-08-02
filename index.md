@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: brand
       text: Quick Start
-      link: /quick-start
+      link: wiki/quick-start
     - theme: alt
       text: Documentation
-      link: /api-examples
+      link: wiki/api-examples
 
 features:
   - icon: 🛠️
