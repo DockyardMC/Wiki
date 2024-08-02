@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Quick Start
-      link: /markdown-examples
+      link: /quick-start
     - theme: alt
       text: Documentation
       link: /api-examples
