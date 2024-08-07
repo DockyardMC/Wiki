@@ -6,7 +6,7 @@ hero:
   text: ""
   tagline: An open-source, fast and lightweight Minecraft server software that's written from scratch in Kotlin
   image:
-    src: /logo.png
+    src: /wiki/logo.png
     alt: DockyardMC Logo
   actions:
     - theme: brand
