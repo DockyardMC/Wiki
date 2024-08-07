@@ -1,3 +1,9 @@
+---
+prev:
+  text: 'Parsing & Placing schematics'
+  link: '/wiki/schematics-load'
+next: false
+---
 # Saving Schematics
 
 ::: danger

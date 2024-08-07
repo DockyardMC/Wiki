@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 # Quick Start
 
 ## Setting up
@@ -32,7 +36,6 @@ By default, Dockyard will create an empty world for you to spawn in. As Dockyard
 To change what world players initially spawn in, you can listen on the `PlayerPreSpawnWorldSelectionEvent` event and override the world there
 
 ```kotlin
-
 val customWorld = WorldManager.create("custom_world", FlatWorldGenerator(), DimensionTypes.OVERWORLD)
 
 Events.on<PlayerPreSpawnWorldSelectionEvent> {

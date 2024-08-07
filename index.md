@@ -14,7 +14,7 @@ hero:
       link: wiki/quick-start
     - theme: alt
       text: Documentation
-      link: wiki/api-examples
+      link: wiki/quick-start
 
 features:
   - icon: 🛠️
