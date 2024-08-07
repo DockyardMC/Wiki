@@ -173,5 +173,5 @@ dist
 
 # Finder (MacOS) folder config
 .DS_Store
-.vitepress
 bun.lockb
+.vitepress/cache/deps
