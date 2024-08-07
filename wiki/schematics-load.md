@@ -16,7 +16,7 @@ val file = File("./cool_house.schem")
 val schematic = SchematicReader.read(file)
 ```
 
-By default, SchematicReader includes a cache. If you attempt to load the same schematic again (and its content hasn't changed), the previously parsed schematic will be retrieved from the cache instead. You can change this in the [configuration file](wiki/configuration-file)
+By default, SchematicReader includes a cache. If you attempt to load the same schematic again (and its content hasn't changed), the previously parsed schematic will be retrieved from the cache instead. You can change this in the [configuration file](configuration-file)
 
 ## Placing Schematics
 

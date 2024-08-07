@@ -27,7 +27,7 @@ Setting up a dockyard server is easy! As DockyardMC is a library and not a stand
     server.start()
     ```
 
-Now you should have a server running, by default on IP `0.0.0.0` and port `25565`. You can change this later in the [configuration file](wiki/configuration-file)
+Now you should have a server running, by default on IP `0.0.0.0` and port `25565`. You can change this later in the [configuration file](configuration-file)
 
 ## Spawning
 
