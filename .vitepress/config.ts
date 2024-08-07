@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "DockyardMC",
   description: "Wiki for the DockyardMC Project",
-  base: '/',
+  base: '/Wiki/',
   themeConfig: {
     editLink: {
           pattern: 'https://github.com/DockyardMC/Wiki/edit/main/:path',
