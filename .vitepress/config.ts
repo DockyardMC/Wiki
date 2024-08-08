@@ -15,19 +15,31 @@ export default defineConfig({
     ],
 
     sidebar: [
-      {
-        text: 'Setup',
-        items: [
-          { text: 'Quick Start', link: 'wiki/quick-start' }
-        ]
-      },
-        {
-          text: 'Schematics',
-          items: [
-            { text: 'Parsing & Placing Schematics', link: 'wiki/schematics-load' },
-            { text: 'Saving Schematics', link: 'wiki/schematics-save' }
-          ]
-        }
+          {
+            text: 'Setup',
+            items: [
+              { text: 'Quick Start', link: 'wiki/quick-start' }
+            ]
+          },
+            {
+              text: 'Schematics',
+              items: [
+                { text: 'Parsing & Placing Schematics', link: 'wiki/schematics-load' },
+                { text: 'Saving Schematics', link: 'wiki/schematics-save' }
+              ]
+            },
+            {
+              text: 'World',
+              items: [
+                { text: 'Blocks & Block States', link: 'wiki/block-states' },
+              ]
+            },
+            {
+              text: 'Events',
+              items: [
+                { text: 'List of all events', link: 'wiki/events' },
+              ]
+            },
     ],
 
     socialLinks: [
