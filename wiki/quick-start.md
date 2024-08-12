@@ -18,7 +18,7 @@ Setting up a dockyard server is easy! As DockyardMC is a library and not a stand
     }
     
     dependencies {
-        implementation("io.github.dockyardmc:dockyard:0.2")
+        implementation("io.github.dockyardmc:dockyard:0.3")
     }
     
     ```
