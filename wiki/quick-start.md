@@ -2,9 +2,10 @@
 prev: false
 next: false
 ---
+
 # Quick Start
 
-## Setting up
+## Setting upw
 
 Setting up a dockyard server is easy! As DockyardMC is a library and not a standalone program (unlike for example PaperMC), you'll need to integrate it into your Kotlin project.
 

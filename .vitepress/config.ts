@@ -40,6 +40,14 @@ export default defineConfig({
                 { text: 'List of all events', link: 'wiki/events' },
               ]
             },
+            {
+                text: 'Entities',
+                items: [
+                    { text: 'Potion Effects', link: 'wiki/potion-effects' },
+                    { text: 'Entity Metadata', link: 'wiki/entity-metadata' },
+                    { text: 'Layering Entity Metadata', link: 'wiki/layering-entity-meta' },
+                    ]
+            },
     ],
 
     socialLinks: [
