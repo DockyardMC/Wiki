@@ -46,6 +46,7 @@ export default defineConfig({
                     { text: 'Potion Effects', link: 'wiki/potion-effects' },
                     { text: 'Entity Metadata', link: 'wiki/entity-metadata' },
                     { text: 'Layering Entity Metadata', link: 'wiki/layering-entity-meta' },
+                    { text: 'Teams', link: 'wiki/teams' },
                     ]
             },
     ],
