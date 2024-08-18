@@ -5,7 +5,7 @@ export default defineConfig({
   description: "Wiki for the DockyardMC Project",
   base: '/Wiki/',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/Wiki/favicon.ico' }]
   ],
   themeConfig: {
     logo: { src: '/logo.png', width: 24, height: 24 },
