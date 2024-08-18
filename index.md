@@ -6,7 +6,7 @@ hero:
   text: ""
   tagline: An open-source, fast and lightweight Minecraft server software that's written from scratch in Kotlin
   image:
-    src: https://media.discordapp.net/attachments/749300558199783447/1270890969956352082/logo.png?ex=66b558f3&is=66b40773&hm=40439f608a13f1670396cbd47212fabde5eaa4db84a153ba14c359bdb66919b0&=&format=webp&quality=lossless
+    src: https://media.discordapp.net/attachments/749300558199783447/1270890969956352082/logo.png?ex=66c330b3&is=66c1df33&hm=287471b6892e0e8ddb0935708456437d5a403854b00f09162f4f960859e378b5&=&format=webp&quality=lossless
     alt: DockyardMC Logo
   actions:
     - theme: brand

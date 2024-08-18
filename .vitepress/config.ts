@@ -47,6 +47,9 @@ export default defineConfig({
                     { text: 'Entity Metadata', link: 'wiki/entity-metadata' },
                     { text: 'Layering Entity Metadata', link: 'wiki/layering-entity-meta' },
                     { text: 'Teams', link: 'wiki/teams' },
+                    { text: 'Red Screen Tint', link: 'wiki/red-tint' },
+                    { text: 'Freeze ticks', link: 'wiki/freeze-ticks' },
+                    { text: 'Is on fire', link: 'wiki/is-on-fire' },
                     ]
             },
     ],
