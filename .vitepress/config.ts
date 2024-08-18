@@ -3,8 +3,12 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "DockyardMC",
   description: "Wiki for the DockyardMC Project",
-  base: '/Wiki/',
+  base: '/',
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
   themeConfig: {
+    logo: { src: '/logo.png', width: 24, height: 24 },
     editLink: {
           pattern: 'https://github.com/DockyardMC/Wiki/edit/main/:path',
           text: 'Edit this page on GitHub'
@@ -13,7 +17,6 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Documentation', link: 'wiki/quick-start' }
     ],
-
     sidebar: [
           {
             text: 'Setup',
@@ -37,7 +40,7 @@ export default defineConfig({
             {
               text: 'Events',
               items: [
-                { text: 'List of all events', link: 'wiki/events' },
+                { text: 'List of Events', link: 'wiki/events' },
               ]
             },
             {
@@ -48,8 +51,8 @@ export default defineConfig({
                     { text: 'Layering Entity Metadata', link: 'wiki/layering-entity-meta' },
                     { text: 'Teams', link: 'wiki/teams' },
                     { text: 'Red Screen Tint', link: 'wiki/red-tint' },
-                    { text: 'Freeze ticks', link: 'wiki/freeze-ticks' },
-                    { text: 'Is on fire', link: 'wiki/is-on-fire' },
+                    { text: 'Freeze Ticks', link: 'wiki/freeze-ticks' },
+                    { text: 'Is On Fire', link: 'wiki/is-on-fire' },
                     ]
             },
     ],

@@ -5,9 +5,9 @@ next: false
 
 # Quick Start
 
-## Setting upw
+## Setting up
 
-Setting up a dockyard server is easy! As DockyardMC is a library and not a standalone program (unlike for example PaperMC), you'll need to integrate it into your Kotlin project.
+Setting up a Dockyard server is easy! As DockyardMC is a library and not a standalone program (unlike for example PaperMC), you'll need to integrate it into your Kotlin project.
 
 1. Create a new empty Kotlin project
 2. Add following to your `build.gradle.kts`:
