@@ -55,6 +55,13 @@ export default defineConfig({
                     { text: 'Is On Fire', link: 'wiki/is-on-fire' },
                     ]
             },
+            {
+                text: 'Display Entities',
+                items: [
+                    { text: 'Base Display Entity', link: 'wiki/display-entity' },
+                    { text: 'Text Displays', link: 'wiki/text-displays' },
+                    ]
+            },
     ],
 
     socialLinks: [
