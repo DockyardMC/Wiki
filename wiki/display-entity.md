@@ -25,4 +25,11 @@ This is the base entity class for all other display entities and cannot be spawn
 
 ## Usage
 
-You can't spawn this entity. 
+You can't spawn this entity. Spawn either [Text Display](text-displays), [Item Display](item-displays) or [Block Display](block-displays)
+
+All display entities also have following utility functions:
+
+- `scaleTo(x: Float, y: Float, z: Float, interpolation: Int?)`
+- `translateTo(x: Float, y: Float, z: Float, interpolation: Int?)`
+- `rotateTo(x: Float, y: Float, z: Float, interpolation: Int?)`
+- `rotateBy(x: Float, y: Float, z: Float, interpolation: Int?)`
