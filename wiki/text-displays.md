@@ -1,3 +1,12 @@
+---
+prev:
+  text: 'Base Display Entity'
+  link: '/wiki/display-entity'
+next:
+  text: 'Item Displays'
+  link: '/wiki/item-displays'
+---
+
 # Text Displays
 
 ## Overview

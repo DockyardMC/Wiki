@@ -60,6 +60,8 @@ export default defineConfig({
                 items: [
                     { text: 'Base Display Entity', link: 'wiki/display-entity' },
                     { text: 'Text Displays', link: 'wiki/text-displays' },
+                    { text: 'Item Displays', link: 'wiki/item-displays' },
+                    { text: 'Block Displays', link: 'wiki/block-displays' },
                     ]
             },
     ],

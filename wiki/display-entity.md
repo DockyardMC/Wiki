@@ -1,3 +1,10 @@
+---
+prev: false
+next:
+  text: 'Text Displays'
+  link: '/wiki/text-displays'
+---
+
 # Base Display Entity
 
 This is the base entity class for all other display entities and cannot be spawned on its own
