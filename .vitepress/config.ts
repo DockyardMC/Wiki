@@ -13,15 +13,21 @@ export default defineConfig({
           pattern: 'https://github.com/DockyardMC/Wiki/edit/main/:path',
           text: 'Edit this page on GitHub'
     },
+    docFooter: {
+      prev: false,
+      next: false
+    },
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Documentation', link: 'wiki/quick-start' }
     ],
     sidebar: [
           {
-            text: 'Setup',
+            text: 'Overview',
             items: [
-              { text: 'Quick Start', link: 'wiki/quick-start' }
+              { text: 'Quick Start', link: 'wiki/quick-start' },
+              { text: 'Viewer Structure', link: 'wiki/viewers' },
+              { text: 'Configuration File', link: 'wiki/configuration-file' }
             ]
           },
             {
@@ -46,6 +52,7 @@ export default defineConfig({
             {
                 text: 'Entities',
                 items: [
+                    { text: 'Entities', link: 'wiki/entities' },
                     { text: 'Potion Effects', link: 'wiki/potion-effects' },
                     { text: 'Entity Metadata', link: 'wiki/entity-metadata' },
                     { text: 'Layering Entity Metadata', link: 'wiki/layering-entity-meta' },
