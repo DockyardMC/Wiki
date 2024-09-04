@@ -18,14 +18,16 @@ The config is stored in the core directory with the name `dockyard.toml`
     *   `async` (Boolean): Specifies if the server should do chunk loading and generation asynchronously
 *   `implementationConfig`:
     *   `applyBlockPlacementRules` (Boolean): Enables or disables block placement rules. (These are very barebones)
-*   `bundledPlugins`:
+    *   `notifyUserOfExceptionDuringCommand` (Boolean): If exception is thrown during command execution, should the executor be notified?
+    *   `commandErrorPrefix` (String): The prefix of command error message
+    *   `commandNoPermissionsMessage` (String): The message that gets sent to the player when they do not have permissions to execute the command 
+*   `defaultImplementations`:
     *   `dockyardCommands` (Boolean): Enables or disables the core dockyard commands like `/gamemode`, `/world` and `/version`
-    *   `dockyardExtras` (Boolean): Enables or disables additional implementations like join/leave messages
 
 ## Current Default Config
 
 ```toml
-configVersion = 2
+configVersion = 3
 
 [serverConfig]
     ip = "0.0.0.0"
@@ -39,11 +41,23 @@ configVersion = 2
 
 [implementationConfig]
     applyBlockPlacementRules = true
+    notifyUserOfExceptionDuringCommand = true
+    commandErrorPrefix = "<dark_red>Error <dark_gray>| <red>"
+    commandNoPermissionsMessage = "You do not have permissions to execute this command!"
 
-[bundledPlugins]
+[defaultImplementations]
     dockyardCommands = true
-    dockyardExtras = false
 ```
+
+## Config Change History
+
+### Changes in config version 3:
+
+- Renamed `bundledPlugins` to `defaultImplementations` since plugin support was completely removed
+- Removed `dockyardExtras` from implementations
+- Added `notifyUserOfExceptionDuringCommand` to implementation config
+- Added `commandErrorPrefix` to implementation config
+- Added `commandNoPermissionsMessage` to implementation config
 
 ### Changes in config version 2:
 

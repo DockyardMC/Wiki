@@ -1,4 +1,23 @@
 # Events
+## `CommandExecuteEvent`
+This event is dispatched when command gets executed
+
+Event is cancellable: `true`
+
+Fields:
+- command: `Command`
+- executor: `CommandExecutor`
+- raw: `String`
+
+## `CommandSuggestionEvent`
+This event is dispatched when client requests command suggestions
+
+Event is cancellable: `true`
+
+Fields:
+- command: `String`
+- player: `Player`
+
 ## `EntityDamageEvent`
 This event is dispatched when entity takes damage
 
@@ -28,8 +47,17 @@ Fields:
 - entity: `Entity`
 - viewer: `Player`
 
+## `EntityViewerRemoveEvent`
+This event is dispatched when viewer is removed from entity viewer list
+
+Event is cancellable: `true`
+
+Fields:
+- entity: `Entity`
+- viewer: `Player`
+
 ## `HorseJumpEvent`
-This event is dispatched when player's horse changes jump state
+This event is dispatched when player's horse starts or stops jumping
 
 Event is cancellable: `false`
 
@@ -42,9 +70,9 @@ This event is dispatched server receives packet from client
 Event is cancellable: `true`
 
 Fields:
-- connection: `interface ChannelHandlerContext`
+- connection: `ChannelHandlerContext`
 - id: `int`
-- packet: `interface ServerboundPacket`
+- packet: `ServerboundPacket`
 - size: `int`
 
 ## `PacketSentEvent`
@@ -53,7 +81,7 @@ This event is dispatched server sends packet to client
 Event is cancellable: `true`
 
 Fields:
-- connection: `interface ChannelHandlerContext`
+- connection: `ChannelHandlerContext`
 - packet: `ClientboundPacket`
 
 ## `PlayerBedLeaveEvent`
@@ -174,6 +202,16 @@ Event is cancellable: `false`
 
 Fields:
 
+## `PlayerEnterChunkEvent`
+This event is dispatched when player enters new chunk
+
+Event is cancellable: `false`
+
+Fields:
+- chunk: `Chunk?`
+- chunkIndex: `long`
+- player: `Player`
+
 ## `PlayerFlightToggleEvent`
 This event is dispatched when player toggles flight
 
@@ -246,6 +284,15 @@ This event is dispatched when player respawns after dying
 Event is cancellable: `false`
 
 Fields:
+- player: `Player`
+
+## `PlayerRightClickWithItemEvent`
+This event is dispatched when player right clicks with item in hand
+
+Event is cancellable: `true`
+
+Fields:
+- item: `ItemStack`
 - player: `Player`
 
 ## `PlayerSelectedHotbarSlotChangeEvent`
