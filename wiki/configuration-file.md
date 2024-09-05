@@ -35,6 +35,7 @@ configVersion = 3
     networkCompressionThreshold = 256
     cacheSchematics = true
     debug = false
+    maxPlayers = 50
 
 [chunkEngine]
     async = true
@@ -58,6 +59,7 @@ configVersion = 3
 - Added `notifyUserOfExceptionDuringCommand` to implementation config
 - Added `commandErrorPrefix` to implementation config
 - Added `commandNoPermissionsMessage` to implementation config
+- Added `maxPlayers` to server config
 
 ### Changes in config version 2:
 
