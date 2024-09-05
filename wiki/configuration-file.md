@@ -14,6 +14,7 @@ The config is stored in the core directory with the name `dockyard.toml`
     *   `networkCompressionThreshold` (Int): Minimum size (in bytes) for data to be compressed before sending over the network
     *   `debug` (Boolean): Enables or disables debug/developer mode (Do not enable on production servers, its lot of spam)
     *   `cacheSchematics` (Boolean): Enables or disables caching of schematic files. If you are gonna be placing same schematic multiple times, this will cache the schematic when its first parsed. Any subsequent placements will retrieved it from the cache instead of parsing it again. Do keep in mind, if the contents of the file changes, the cache will be invalidated.  
+    *   `maxPlayers` (Int): Maximum amount of players able to join the server  
 *   `chunkEngine`
     *   `async` (Boolean): Specifies if the server should do chunk loading and generation asynchronously
 *   `implementationConfig`:
