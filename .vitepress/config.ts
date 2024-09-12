@@ -78,6 +78,12 @@ export default defineConfig({
           { text: "Block Displays", link: "wiki/block-displays" },
         ],
       },
+        {
+          text: "Player",
+          items: [
+            { text: "Resourcepack", link: "wiki/resourcepacks" },
+          ],
+        },
     ],
 
     socialLinks: [
