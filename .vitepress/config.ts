@@ -26,6 +26,7 @@ export default defineConfig({
           { text: "Quick Start", link: "wiki/quick-start" },
           { text: "Viewer Structure", link: "wiki/viewers" },
           { text: "Configuration File", link: "wiki/configuration-file" },
+          { text: "Plugin Messages", link: "wiki/plugin-messages" },
         ],
       },
       {

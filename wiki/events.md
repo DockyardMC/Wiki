@@ -195,6 +195,15 @@ Event is cancellable: `false`
 
 Fields:
 
+## `PlayerDropItemEvent`
+This event is dispatched when player drops item
+
+Event is cancellable: `true`
+
+Fields:
+- itemStack: `ItemStack`
+- player: `Player`
+
 ## `PlayerElytraFlyingStartEvent`
 This event is dispatched when player starts flying with elytra (not flight state change)
 
@@ -339,13 +348,23 @@ Event is cancellable: `true`
 Fields:
 
 ## `PluginMessageReceivedEvent`
-This event is dispatched server receives plugin message from client (Custom payload packet)
+This event is dispatched server receives plugin message from client (Custom Payload Packet)
+
+Event is cancellable: `true`
+
+Fields:
+- channel: `String`
+- data: `ByteBuf`
+- player: `Player`
+
+## `RegisterPluginChannelsEvent`
+This event is dispatched when server receives the minecraft:register plugin message with list of custom channels
 
 Event is cancellable: `false`
 
 Fields:
-- channel: `String`
-- data: `String`
+- channels: `List<String>`
+- player: `Player`
 
 ## `ServerBrandEvent`
 This event is dispatched server sends the server brand to client during configuration
@@ -393,6 +412,15 @@ This event is dispatched when server ticks
 Event is cancellable: `false`
 
 Fields:
+
+## `UnregisterPluginChannelsEvent`
+This event is dispatched when server receives the minecraft:unregister plugin message with list of custom channels
+
+Event is cancellable: `false`
+
+Fields:
+- channels: `List<String>`
+- player: `Player`
 
 ## `WorldFinishLoadingEvent`
 This event is dispatched when world is finished loading
