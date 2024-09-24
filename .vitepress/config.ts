@@ -52,7 +52,10 @@ export default defineConfig({
       },
       {
         text: "Events",
-        items: [{ text: "List of Events", link: "wiki/events" }],
+        items: [
+            { text: "Events", link: "wiki/events" },
+            { text: "List of Events", link: "wiki/event-list" },
+        ],
       },
       {
         text: "Entities",
