@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "DockyardMC",
   description: "Wiki for the DockyardMC Project",
-  base: "/Wiki/",
+  base: "/",
   head: [["link", { rel: "icon", href: "/Wiki/favicon.ico" }]],
   themeConfig: {
     logo: { src: "/logo.png", width: 24, height: 24 },
