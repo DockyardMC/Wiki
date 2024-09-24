@@ -1,4 +1,4 @@
-# Events
+# Event List
 ## `CommandExecuteEvent`
 This event is dispatched when command gets executed
 
@@ -62,6 +62,7 @@ This event is dispatched when player's horse starts or stops jumping
 Event is cancellable: `false`
 
 Fields:
+- isJumping: `boolean`
 - player: `Player`
 
 ## `PacketReceivedEvent`
@@ -90,6 +91,7 @@ This event is dispatched when player leaves bed
 Event is cancellable: `false`
 
 Fields:
+- player: `Player`
 
 ## `PlayerBlockBreakEvent`
 This event is dispatched when player breaks a block
@@ -194,6 +196,7 @@ This event is dispatched when player disconnects
 Event is cancellable: `false`
 
 Fields:
+- player: `Player`
 
 ## `PlayerDropItemEvent`
 This event is dispatched when player drops item
@@ -210,6 +213,7 @@ This event is dispatched when player starts flying with elytra (not flight state
 Event is cancellable: `false`
 
 Fields:
+- player: `Player`
 
 ## `PlayerEnterChunkEvent`
 This event is dispatched when player enters new chunk
@@ -278,15 +282,6 @@ Fields:
 - oldLocation: `Location`
 - player: `Player`
 
-## `PlayerPreSpawnWorldSelectionEvent`
-This event is dispatched when player is in configuration phase and needs initial world to spawn in
-
-Event is cancellable: `false`
-
-Fields:
-- player: `Player`
-- world: `World`
-
 ## `PlayerRespawnEvent`
 This event is dispatched when player respawns after dying
 
@@ -313,6 +308,14 @@ Fields:
 - player: `Player`
 - slot: `int`
 
+## `PlayerSendFeatureFlagsEvent`
+This event is dispatched server sends feature flags to client during configuration
+
+Event is cancellable: `false`
+
+Fields:
+- featureFlags: `List<FeatureFlag>`
+
 ## `PlayerSneakToggleEvent`
 This event is dispatched when player's sneaking state changes
 
@@ -321,6 +324,15 @@ Event is cancellable: `false`
 Fields:
 - player: `Player`
 - sneaking: `boolean`
+
+## `PlayerSpawnEvent`
+This event is dispatched when player is in configuration phase and needs initial world to spawn in
+
+Event is cancellable: `false`
+
+Fields:
+- player: `Player`
+- world: `World`
 
 ## `PlayerSprintToggleEvent`
 This event is dispatched when player changes sprinting state
@@ -346,6 +358,7 @@ This event is dispatched when player opens vehicle's inventory while riding it
 Event is cancellable: `true`
 
 Fields:
+- player: `Player`
 
 ## `PluginMessageReceivedEvent`
 This event is dispatched server receives plugin message from client (Custom Payload Packet)
@@ -373,14 +386,6 @@ Event is cancellable: `false`
 
 Fields:
 - brand: `String`
-
-## `ServerFeatureFlagsEvent`
-This event is dispatched server sends feature flags to client during configuration
-
-Event is cancellable: `false`
-
-Fields:
-- featureFlags: `List<FeatureFlag>`
 
 ## `ServerFinishLoadEvent`
 This event is dispatched server finishes loading
@@ -412,6 +417,7 @@ This event is dispatched when server ticks
 Event is cancellable: `false`
 
 Fields:
+- serverTicks: `int`
 
 ## `UnregisterPluginChannelsEvent`
 This event is dispatched when server receives the minecraft:unregister plugin message with list of custom channels
