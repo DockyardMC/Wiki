@@ -19,5 +19,5 @@ Every entity provides `addViewer` and `removeViewer` methods.
 When you add a player as viewer to an entity, the player will see the entity. If you remove the player, the player will no longer see the entity and won't be able to interact with it.
 
 Other dockyard apis that utilizes the viewer structure are:
-- Bossbar API
+- [Bossbar API](/wiki/bossbar.md)
 - Sidebar API
