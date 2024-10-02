@@ -22,10 +22,7 @@ See [Viewer Structure](/wiki/viewers) if you do not understand what a "viewer" i
 You can create a bossbar for a player using the following code:
 
 ```kotlin
-val viewerList = BindableList()
-viewerList.add(player)
-
-val customBossbar = Bossbar("Custom Bossbar", 0f, BossbarColor.PINK, BossbarNotches.NO_NOTCHES, viewerList)
+val customBossbar = Bossbar("Custom Bossbar", 0f, BossbarColor.PINK, BossbarNotches.NO_NOTCHES, player)
 ```
 
 To modify an attribute of a bossbar, you can simply change its value:
