@@ -3,7 +3,7 @@ prev: false
 next: false
 ---
 
-# Teams
+# Teams API
 
 ## Overview
 
