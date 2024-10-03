@@ -67,7 +67,6 @@ export default defineConfig({
             text: "Layering Entity Metadata",
             link: "wiki/layering-entity-meta",
           },
-          { text: "Teams", link: "wiki/teams" },
           { text: "Red Screen Tint", link: "wiki/red-tint" },
           { text: "Freeze Ticks", link: "wiki/freeze-ticks" },
           { text: "Is On Fire", link: "wiki/is-on-fire" },
@@ -92,6 +91,7 @@ export default defineConfig({
         text: "APIs",
         items: [
           { text: "Bossbar API", link: "wiki/bossbar" },
+          { text: "Teams API", link: "wiki/teams" },
         ],
       },
     ],
