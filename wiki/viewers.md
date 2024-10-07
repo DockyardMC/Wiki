@@ -20,4 +20,4 @@ When you add a player as viewer to an entity, the player will see the entity. If
 
 Other dockyard apis that utilizes the viewer structure are:
 - [Bossbar API](/wiki/bossbar.md)
-- Sidebar API
+- [Sidebar API](/wiki/sidebar.md)
