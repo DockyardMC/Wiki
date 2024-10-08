@@ -92,6 +92,7 @@ export default defineConfig({
         items: [
           { text: "Bossbar API", link: "wiki/bossbar" },
           { text: "Teams API", link: "wiki/teams" },
+          { text: "Sidebar API", link: "wiki/sidebar" },
         ],
       },
     ],
