@@ -18,7 +18,7 @@ Setting up a Dockyard server is easy! As DockyardMC is a library and not a stand
     }
     
     dependencies {
-        implementation("io.github.dockyardmc:dockyard:0.5")
+        implementation("io.github.dockyardmc:dockyard:0.6.2")
     }
     
     ```
@@ -34,12 +34,12 @@ Now you should have a server running, by default on IP `0.0.0.0` and port `25565
 
 By default, Dockyard will create an empty world for you to spawn in. As Dockyard doesn't have any world loaders yet, this world will serve as the main and fallback world in case you do not create any worlds on your own
 
-To change what world players initially spawn in, you can listen on the `PlayerPreSpawnWorldSelectionEvent` event and override the world there
+To change what world players initially spawn in, you can listen on the `PlayerSpawnEvent` event and override the world there
 
 ```kotlin
 val customWorld = WorldManager.create("custom_world", FlatWorldGenerator(), DimensionTypes.OVERWORLD)
 
-Events.on<PlayerPreSpawnWorldSelectionEvent> {
+Events.on<PlayerSpawnEvent> {
     it.world = customWorld
 }
 ```

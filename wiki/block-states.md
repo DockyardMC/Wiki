@@ -1,20 +1,18 @@
 # Blocks & Block States
 
+> [!IMPORTANT]
+> Since `Dockyard 0.6`, blocks have been split into `Block` and `RegistryBlock`
+
 ## Overview
 
 Blocks have the following fields:
-- `identifier` (minecraft:stone)
-- `name` which is the display name (Stone)
-- `transparent` which represents if block is transparent or not
-- `lightEmitted` which represents the amount of light the block gives off
-- `lightFiltered` which represents the amount of light the block filters when light is passed through the block
-- `minState` which is the min protocol block state id of the block
-- `maxState` which is the max protocol block state id of the block
-- `defaultBlockState` which is the default protocol block state of the block
-- `isClickable` which represents if block is right-clickable
-- `cachedStates` which contains all possible block states combination pre-cached
+- `registryBlock` which is the registry representation of the block
 - `blockStates` which has all the current block states of the block
-
+- `customData` which is a `CustomDataHolder`, allows you to store custom metadata on the block
+- `identifier` (minecraft:stone)
+- `getProtocolId` method which returns the protocol id of the block
+- `isAir` method which boolean depending on if the block is air or not
+- 
 ## Usage
 
 ```kotlin

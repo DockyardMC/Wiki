@@ -49,6 +49,7 @@ export default defineConfig({
       {
         text: "World",
         items: [{ text: "Blocks & Block States", link: "wiki/block-states" }],
+        items: [{ text: "Batch Block Updates", link: "wiki/batch-block-updates" }],
       },
       {
         text: "Events",
@@ -93,6 +94,7 @@ export default defineConfig({
           { text: "Bossbar API", link: "wiki/bossbar" },
           { text: "Teams API", link: "wiki/teams" },
           { text: "Sidebar API", link: "wiki/sidebar" },
+          { text: "Bounds API", link: "wiki/bounds" },
         ],
       },
     ],
