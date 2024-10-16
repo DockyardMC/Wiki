@@ -48,8 +48,10 @@ export default defineConfig({
       },
       {
         text: "World",
-        items: [{ text: "Blocks & Block States", link: "wiki/block-states" }],
-        items: [{ text: "Batch Block Updates", link: "wiki/batch-block-updates" }],
+        items: [
+            { text: "Blocks & Block States", link: "wiki/block-states" },
+            { text: "Batch Block Updates", link: "wiki/batch-block-updates" }
+        ],
       },
       {
         text: "Events",
