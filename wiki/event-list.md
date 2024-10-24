@@ -74,6 +74,7 @@ Fields:
 - connection: `ChannelHandlerContext`
 - id: `int`
 - packet: `ServerboundPacket`
+- processor: `PlayerNetworkManager`
 - size: `int`
 
 ## `PacketSentEvent`
@@ -84,6 +85,7 @@ Event is cancellable: `true`
 Fields:
 - connection: `ChannelHandlerContext`
 - packet: `ClientboundPacket`
+- processor: `PlayerNetworkManager`
 
 ## `PlayerBedLeaveEvent`
 This event is dispatched when player leaves bed
@@ -215,6 +217,15 @@ Event is cancellable: `false`
 Fields:
 - player: `Player`
 
+## `PlayerEnterBoundEvent`
+This event is dispatched when player enters a bound
+
+Event is cancellable: `false`
+
+Fields:
+- bound: `Bound`
+- player: `Player`
+
 ## `PlayerEnterChunkEvent`
 This event is dispatched when player enters new chunk
 
@@ -261,6 +272,15 @@ This event is dispatched when player enters the PLAY phase
 Event is cancellable: `false`
 
 Fields:
+- player: `Player`
+
+## `PlayerLeaveBoundEvent`
+This event is dispatched When player leaves a bound
+
+Event is cancellable: `false`
+
+Fields:
+- bound: `Bound`
 - player: `Player`
 
 ## `PlayerLeaveEvent`
@@ -409,7 +429,6 @@ This event is dispatched server starts (before loading starts)
 Event is cancellable: `false`
 
 Fields:
-- server: `DockyardServer`
 
 ## `ServerTickEvent`
 This event is dispatched when server ticks
