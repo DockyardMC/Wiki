@@ -1,4 +1,27 @@
 # Event List
+## `ClientInputEvent`
+This event is dispatched when player uses movement input
+
+Event is cancellable: `false`
+
+Fields:
+- backward: `boolean`
+- forward: `boolean`
+- jump: `boolean`
+- left: `boolean`
+- player: `Player`
+- right: `boolean`
+- shift: `boolean`
+- sprint: `boolean`
+
+## `ClientTickEndEvent`
+This event is dispatched when the current tick of client ends executing
+
+Event is cancellable: `false`
+
+Fields:
+- player: `Player`
+
 ## `CommandExecuteEvent`
 This event is dispatched when command gets executed
 
@@ -65,6 +88,24 @@ Fields:
 - isJumping: `boolean`
 - player: `Player`
 
+## `ItemGroupCooldownEndEvent`
+This event is dispatched when group or item cooldown ends for a player
+
+Event is cancellable: `false`
+
+Fields:
+- cooldown: `Player$ItemGroupCooldown`
+- player: `Player`
+
+## `ItemGroupCooldownStartEvent`
+This event is dispatched when group or item cooldown starts for a player
+
+Event is cancellable: `true`
+
+Fields:
+- cooldown: `Player$ItemGroupCooldown`
+- player: `Player`
+
 ## `PacketReceivedEvent`
 This event is dispatched server receives packet from client
 
@@ -74,6 +115,7 @@ Fields:
 - connection: `ChannelHandlerContext`
 - id: `int`
 - packet: `ServerboundPacket`
+- processor: `PlayerNetworkManager`
 - size: `int`
 
 ## `PacketSentEvent`
@@ -84,6 +126,7 @@ Event is cancellable: `true`
 Fields:
 - connection: `ChannelHandlerContext`
 - packet: `ClientboundPacket`
+- processor: `PlayerNetworkManager`
 
 ## `PlayerBedLeaveEvent`
 This event is dispatched when player leaves bed
@@ -215,6 +258,15 @@ Event is cancellable: `false`
 Fields:
 - player: `Player`
 
+## `PlayerEnterBoundEvent`
+This event is dispatched when player enters a bound
+
+Event is cancellable: `false`
+
+Fields:
+- bound: `Bound`
+- player: `Player`
+
 ## `PlayerEnterChunkEvent`
 This event is dispatched when player enters new chunk
 
@@ -224,6 +276,16 @@ Fields:
 - chunk: `Chunk?`
 - chunkIndex: `long`
 - player: `Player`
+
+## `PlayerEquipEvent`
+This event is dispatched when player equips piece of equipment
+
+Event is cancellable: `false`
+
+Fields:
+- item: `ItemStack`
+- player: `Player`
+- slot: `EquipmentSlot`
 
 ## `PlayerFlightToggleEvent`
 This event is dispatched when player toggles flight
@@ -261,6 +323,15 @@ This event is dispatched when player enters the PLAY phase
 Event is cancellable: `false`
 
 Fields:
+- player: `Player`
+
+## `PlayerLeaveBoundEvent`
+This event is dispatched When player leaves a bound
+
+Event is cancellable: `false`
+
+Fields:
+- bound: `Bound`
 - player: `Player`
 
 ## `PlayerLeaveEvent`
@@ -409,7 +480,6 @@ This event is dispatched server starts (before loading starts)
 Event is cancellable: `false`
 
 Fields:
-- server: `DockyardServer`
 
 ## `ServerTickEvent`
 This event is dispatched when server ticks
