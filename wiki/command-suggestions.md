@@ -9,23 +9,19 @@ next: false
 
 ## Overview
 
-You can provide suggestions to an argument by giving it a `CommandSuggestions` class after the suggestion type parameter. 
+You can provide suggestions to an argument by providing it with a `((Player) -> Collection<String>)`
 
-You can use the `SuggestionProvider` to easily creative the `CommandSuggestions` class
+You can alternatively use `simpleSuggestion(string)` if you want only one static suggestion
 
-SuggestionProviders gives you two methods to use:
-- `simple(List<String>)` or `simple(vararg string)` which is simple list of suggestions as string
-- `withContext((Player) -> List<String>)` which gives you a player object of the player receiving the suggestion
-
-### Simple Suggestion example:
+### Usage
 
 ```kotlin
-fun suggestWorlds(): CommandSuggestions {
-    return SuggestionProvider.simple(WorldManager.worlds.map { it.key })
-}
+fun suggestWorlds(player: Player): Collection<String> {
+    return WorldManager.worlds.keys.toList()
+} 
 
 Commands.add("/switchworld") {
-    addArgument("world", WorldArgument(), suggestWorlds())
+    addArgument("world", WorldArgument(), ::sugestWorlds)
     execute {
         val player = it.getPlayerOrThrow()
         val world = getArgument<World>("world")
@@ -35,26 +31,21 @@ Commands.add("/switchworld") {
     }
 }
 ```
-
-### WithContext Suggestion example:
-
+Player specific suggestions:
 
 ```kotlin
-fun suggestHomes(): CommandSuggestions {
-    return SuggestionProvider.withContext { player -> 
-        HomeManager.getHomes(player).map { it.key }
-    }
+fun suggestHomes(player: Player): Collection<String> {
+    return HomeManager.getHomes(player).map { it.key }
 }
 
 Commands.add("home") {
     withDescription("Teleports player to predefined home location")
-    addArgument("home", StringArgument(), suggestHomes())
+    addArgument("home", StringArgument(), ::suggestHomes)
     execute {
         val player = it.getPlayerOrThrow()
         
         val homeName = getArgument<String>("home")
-        val home = HomeManager.getHomes(player)[homeName]
-        if(home == null) throw CommandException("You do not have a home named $homeName!")
+        val home = HomeManager.getHomes(player)[homeName] ?: throw CommandException("You do not have a home named $homeName!")
         
         player.teleport(home.location)
         player.sendMessage("<lime>Teleported you to home <yellow>${home.name}<lime>!")
