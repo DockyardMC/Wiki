@@ -24,11 +24,16 @@ Setting up a Dockyard server is easy! As DockyardMC is a library and not a stand
     ```
 3. Then in your main function, create new instance of Dockyard Server
     ```kotlin
-    val server = DockyardServer()
+    val server = DockyardServer {
+        withIp("0.0.0.0")
+        withPort(25565)
+        useMojangAuth(true)
+    }
+   
     server.start()
     ```
 
-Now you should have a server running, by default on IP `0.0.0.0` and port `25565`. You can change this later in the [configuration file](configuration-file)
+Now you should have a server running on IP `0.0.0.0` and port `25565`. You can change this and other settings in the [startup configuration](configuration-file)
 
 ## Spawning
 
