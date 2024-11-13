@@ -88,6 +88,7 @@ export default defineConfig({
         text: "Player",
         items: [
           { text: "Resourcepack", link: "wiki/resourcepacks" },
+          { text: "Item/Group Cooldowns", link: "wiki/item-cooldowns" },
         ],
       },
       {
