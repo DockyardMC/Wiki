@@ -1,19 +1,4 @@
 # Event List
-## `ClientInputEvent`
-This event is dispatched when player uses movement input
-
-Event is cancellable: `false`
-
-Fields:
-- backward: `boolean`
-- forward: `boolean`
-- jump: `boolean`
-- left: `boolean`
-- player: `Player`
-- right: `boolean`
-- shift: `boolean`
-- sprint: `boolean`
-
 ## `ClientTickEndEvent`
 This event is dispatched when the current tick of client ends executing
 
@@ -61,6 +46,24 @@ Event is cancellable: `true`
 Fields:
 - entity: `Entity`
 
+## `EntityDismountVehicleEvent`
+This event is dispatched when player tries to dismount from a vehicle
+
+Event is cancellable: `true`
+
+Fields:
+- passenger: `Entity`
+- vehicle: `Entity`
+
+## `EntityRideVehicleEvent`
+This event is dispatched when player tries to mount an vehicle
+
+Event is cancellable: `true`
+
+Fields:
+- passenger: `Entity`
+- vehicle: `Entity`
+
 ## `EntityViewerAddEvent`
 This event is dispatched when viewer is added to an entity viewer list
 
@@ -94,7 +97,7 @@ This event is dispatched when group or item cooldown ends for a player
 Event is cancellable: `false`
 
 Fields:
-- cooldown: `Player$ItemGroupCooldown`
+- cooldown: `ItemGroupCooldown`
 - player: `Player`
 
 ## `ItemGroupCooldownStartEvent`
@@ -103,7 +106,7 @@ This event is dispatched when group or item cooldown starts for a player
 Event is cancellable: `true`
 
 Fields:
-- cooldown: `Player$ItemGroupCooldown`
+- cooldown: `ItemGroupCooldown`
 - player: `Player`
 
 ## `PacketReceivedEvent`
@@ -165,6 +168,16 @@ Fields:
 - block: `Block`
 - face: `Direction`
 - heldItem: `ItemStack`
+- location: `Location`
+- player: `Player`
+
+## `PlayerCancelledDiggingEvent`
+This event is dispatched when player cancels digging of a block
+
+Event is cancellable: `false`
+
+Fields:
+- block: `Block`
 - location: `Location`
 - player: `Player`
 
@@ -273,8 +286,8 @@ This event is dispatched when player enters new chunk
 Event is cancellable: `false`
 
 Fields:
-- chunk: `Chunk?`
-- chunkIndex: `long`
+- newChunkPos: `ChunkPos?`
+- oldChunkPos: `ChunkPos`
 - player: `Player`
 
 ## `PlayerEquipEvent`
@@ -286,6 +299,16 @@ Fields:
 - item: `ItemStack`
 - player: `Player`
 - slot: `EquipmentSlot`
+
+## `PlayerFinishedDiggingEvent`
+This event is dispatched when player finishes digging a block
+
+Event is cancellable: `false`
+
+Fields:
+- block: `Block`
+- location: `Location`
+- player: `Player`
 
 ## `PlayerFlightToggleEvent`
 This event is dispatched when player toggles flight
@@ -316,6 +339,21 @@ Fields:
 - entity: `Entity`
 - interactionHand: `PlayerHand`
 - player: `Player`
+
+## `PlayerIputEvent`
+This event is dispatched when player uses movement input
+
+Event is cancellable: `false`
+
+Fields:
+- backward: `boolean`
+- forward: `boolean`
+- jump: `boolean`
+- left: `boolean`
+- player: `Player`
+- right: `boolean`
+- shift: `boolean`
+- sprint: `boolean`
 
 ## `PlayerJoinEvent`
 This event is dispatched when player enters the PLAY phase
@@ -359,6 +397,7 @@ This event is dispatched when player respawns after dying
 Event is cancellable: `false`
 
 Fields:
+- isBecauseOfDeath: `boolean`
 - player: `Player`
 
 ## `PlayerRightClickWithItemEvent`
@@ -413,6 +452,26 @@ Event is cancellable: `false`
 Fields:
 - player: `Player`
 - sprinting: `boolean`
+
+## `PlayerStartDiggingBlockEvent`
+This event is dispatched when player starts digging a block
+
+Event is cancellable: `false`
+
+Fields:
+- block: `Block`
+- location: `Location`
+- player: `Player`
+
+## `PlayerSteerVehicleEvent`
+This event is dispatched when player steers a vehicle
+
+Event is cancellable: `false`
+
+Fields:
+- location: `Location`
+- player: `Player`
+- vehicle: `Entity`
 
 ## `PlayerSwingHandEvent`
 This event is dispatched when player swings their hand
@@ -472,6 +531,7 @@ This event is dispatched client requests motd/status
 Event is cancellable: `false`
 
 Fields:
+- playerNetworkManager: `PlayerNetworkManager`
 - status: `ServerStatus`
 
 ## `ServerStartEvent`
@@ -504,5 +564,14 @@ This event is dispatched when world is finished loading
 Event is cancellable: `false`
 
 Fields:
+- world: `World`
+
+## `WorldTickEvent`
+This event is dispatched when world ticks
+
+Event is cancellable: `true`
+
+Fields:
+- scheduler: `CustomRateScheduler`
 - world: `World`
 
