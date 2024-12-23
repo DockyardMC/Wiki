@@ -92,6 +92,12 @@ export default defineConfig({
         ],
       },
       {
+        text: "Server Metadata",
+        items: [
+          { text: "Server Status", link: "wiki/server-status" },
+        ],
+      },
+      {
         text: "APIs",
         items: [
           { text: "Bossbar API", link: "wiki/bossbar" },
