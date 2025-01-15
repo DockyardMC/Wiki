@@ -49,6 +49,7 @@ export default defineConfig({
       {
         text: "World",
         items: [
+            { text: "Creating a World", link: "wiki/worlds" },
             { text: "Blocks & Block States", link: "wiki/block-states" },
             { text: "Batch Block Updates", link: "wiki/batch-block-updates" }
         ],
